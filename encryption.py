@@ -154,7 +154,7 @@ if __name__ == '__main__':
     # Generating 16 keys - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     def generate_keys(base_key: int) -> typing.Generator[int, None, None]:
-        shifting = [_ for _ in range(16)]
+        shifting = [0] * 16
         for num, indexes in key_shift.items():
             for x in indexes:
                 shifting[x - 1] = num
