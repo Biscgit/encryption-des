@@ -5,6 +5,10 @@
 import typing
 from random import getrandbits
 
+# text and key
+text: int = 0b_0000_0001_0010_0011_0100_0101_0110_0111_1000_1001_1010_1011_1100_1101_1110_1111 or getrandbits(64)
+key: int = 0b_00010011_00110100_01010111_01111001_10011011_10111100_11011111_11110001 or getrandbits(64)
+
 # predefined values
 pc_1 = [
     57, 49, 41, 33, 25, 17, 9,
@@ -123,9 +127,6 @@ key_shift: dict[int: list[int]] = {
     2: [3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15]
 }
 
-# text and key
-text: int = 0b_0000_0001_0010_0011_0100_0101_0110_0111_1000_1001_1010_1011_1100_1101_1110_1111 or getrandbits(64)
-key: int = 0b_00010011_00110100_01010111_01111001_10011011_10111100_11011111_11110001 or getrandbits(64)
 
 if __name__ == '__main__':
     print('DES Encryption v1.0 only using mathematical operations.\n')
